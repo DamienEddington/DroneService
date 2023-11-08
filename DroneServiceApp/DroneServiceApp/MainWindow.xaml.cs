@@ -28,5 +28,6 @@ namespace DroneServiceApp
         {
             InitializeComponent();
         }
+        List<Drone> FinishList = new List<Drone>();
     }
 }
