@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "AXIN7yMUdBLNeKg+DqJlYGXrPmAV01KUHX9fz16izVExWxbYF5ACKIxthAHBjz9OhWCzm722IpUKuqfwBt0MvQ==",
+  "dgSpecHash": "y87uAbG3zKtdltc2aVjrnbM5XG7SEZ0zbMqrM7Oa8BmShiaM9wpPE5wIP7fN3+JV4tyLPTbo+/SfmQ0E+QsAyA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\30042780\\Documents\\GitHub\\DroneServiceApp\\DroneServiceApp\\DroneServiceApp\\DroneServiceApp.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\Damien\\Documents\\GitHub\\DroneServiceApp\\DroneServiceApp\\DroneServiceApp\\DroneServiceApp.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Damien\\.nuget\\packages\\extended.wpf.toolkit\\4.5.1\\extended.wpf.toolkit.4.5.1.nupkg.sha512"
+  ],
   "logs": []
 }
