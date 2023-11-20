@@ -29,7 +29,7 @@ namespace DroneServiceApp
             }
             else
             {
-                addName = CultureInfo.CurrentCulture.TextInfo.ToTitleCase(addName);
+                name = CultureInfo.CurrentCulture.TextInfo.ToTitleCase(addName);
             }
         }
         public string GetModel()

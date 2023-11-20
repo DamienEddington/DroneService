@@ -6,8 +6,8 @@
         xmlns:local="clr-namespace:DroneServiceApp"
         xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
         mc:Ignorable="d"
-        Title="MainWindow" Height="383" Width="800">
-    <Grid>
+        Title="MainWindow" Height="400" Width="800" ResizeMode="CanMinimize">
+    <Grid Margin="0,0,0,-26">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="13*"/>
             <ColumnDefinition Width="187*"/>
@@ -23,34 +23,34 @@
         <ListView x:Name="lstvExpress" d:ItemsSource="{d:SampleData ItemCount=0}" Margin="115,35,0,0" Height="115" VerticalAlignment="Top" HorizontalAlignment="Left" Width="408" Grid.Column="1" SelectionChanged="lstvExpress_SelectionChanged">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Header="Tag" Width="30"></GridViewColumn>
-                    <GridViewColumn Header="Name" Width="120"></GridViewColumn>
-                    <GridViewColumn Header="Model" Width="80"></GridViewColumn>
-                    <GridViewColumn Header="Problem" Width="120"></GridViewColumn>
-                    <GridViewColumn Header="Cost" Width="50"></GridViewColumn>
+                    <GridViewColumn Header="Tag" Width="40" DisplayMemberBinding="{Binding expressT}"></GridViewColumn>
+                    <GridViewColumn Header="Name" Width="120" DisplayMemberBinding="{Binding expressN}"></GridViewColumn>
+                    <GridViewColumn Header="Model" Width="80" DisplayMemberBinding="{Binding expressM}"></GridViewColumn>
+                    <GridViewColumn Header="Problem" Width="120" DisplayMemberBinding="{Binding expressP}"></GridViewColumn>
+                    <GridViewColumn Header="Cost" Width="50" DisplayMemberBinding="{Binding expressC}"></GridViewColumn>
                 </GridView>
             </ListView.View>
         </ListView>
         <ListView x:Name="lstvRegular" d:ItemsSource="{d:SampleData ItemCount=0}" Margin="115,197,0,0" HorizontalAlignment="Left" Width="408" Height="101" VerticalAlignment="Top" Grid.Column="1" SelectionChanged="lstvRegular_SelectionChanged">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Header="Tag" Width="30"></GridViewColumn>
-                    <GridViewColumn Header="Name" Width="120"></GridViewColumn>
-                    <GridViewColumn Header="Model" Width="80"></GridViewColumn>
-                    <GridViewColumn Header="Problem" Width="120"></GridViewColumn>
-                    <GridViewColumn Header="Cost" Width="50"></GridViewColumn>
+                    <GridViewColumn Header="Tag" Width="40" DisplayMemberBinding="{Binding regularT}"></GridViewColumn>
+                    <GridViewColumn Header="Name" Width="120" DisplayMemberBinding="{Binding regularN}"></GridViewColumn>
+                    <GridViewColumn Header="Model" Width="80" DisplayMemberBinding="{Binding regularM}"></GridViewColumn>
+                    <GridViewColumn Header="Problem" Width="120" DisplayMemberBinding="{Binding regularP}"></GridViewColumn>
+                    <GridViewColumn Header="Cost" Width="50" DisplayMemberBinding="{Binding regularC}"></GridViewColumn>
                 </GridView>
             </ListView.View>
         </ListView>
         <Button x:Name="btnExpressRemove" Content="Remove Item" HorizontalAlignment="Left" Margin="115,155,0,0" VerticalAlignment="Top" Width="94" Height="20" Grid.Column="1" Click="btnExpressRemove_Click"/>
         <Button x:Name="btnRegularRemove" Content="Remove Item" HorizontalAlignment="Left" Margin="115,303,0,0" VerticalAlignment="Top" Width="94" Height="20" Grid.Column="1" Click="btnRegularRemove_Click"/>
-        <ListBox x:Name="lstFinishedItems" d:ItemsSource="{d:SampleData ItemCount=0}" Margin="539,38,0,0" HorizontalAlignment="Left" Width="199" Height="261" VerticalAlignment="Top" Grid.Column="1" MouseDoubleClick="lstFinishedItems_MouseDoubleClick"/>
+        <ListBox x:Name="lstFinishedItems" d:ItemsSource="{d:SampleData ItemCount=0}" Margin="539,38,0,0" HorizontalAlignment="Left" Width="188" Height="261" VerticalAlignment="Top" Grid.Column="1" MouseDoubleClick="lstFinishedItems_MouseDoubleClick"/>
         <Label x:Name="lblDataInput" Content="Service Data:" HorizontalAlignment="Left" Margin="23,10,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
         <Label x:Name="lblExpress" Content="Express Queue:" HorizontalAlignment="Left" Margin="274,9,0,0" VerticalAlignment="Top" Grid.Column="1"/>
         <Label x:Name="lblRegular" Content="Regular Queue" HorizontalAlignment="Left" Margin="274,158,0,0" VerticalAlignment="Top" Grid.Column="1"/>
         <Label x:Name="lblFinished" Content="Finished Items:" HorizontalAlignment="Left" Margin="594,10,0,0" VerticalAlignment="Top" Grid.Column="1"/>
-        <TextBox x:Name="stsBar" HorizontalAlignment="Left" Margin="10,328,0,0" TextWrapping="Wrap" Text="Status:" Width="780" IsReadOnly="True" Height="18" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="stsBar" HorizontalAlignment="Left" Margin="16,328,0,0" TextWrapping="Wrap" Text="Status:" Width="763" IsReadOnly="True" Height="20" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
         <Label x:Name="lblPriority" Content="Service Piority:" HorizontalAlignment="Left" Margin="19,211,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
-        <xctk:IntegerUpDown x:Name="uidTag" Increment="10" Minimum="100" Maximum="900" Grid.Column="1" Margin="10,274,638,44" Text="100" IsReadOnly="True"/>
+        <xctk:IntegerUpDown x:Name="uidTag" Increment="10" Minimum="100" Maximum="900" Grid.Column="1" Margin="10,274,0,87" Text="100" IsReadOnly="True" HorizontalAlignment="Left" Width="100"/>
     </Grid>
 </Window>

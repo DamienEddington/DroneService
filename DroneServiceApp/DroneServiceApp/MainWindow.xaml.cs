@@ -113,7 +113,7 @@ namespace DroneServiceApp
                     expressM = drone.GetModel(),
                     expressP = drone.GetProblem(),
                     expressC = "$" + drone.GetCost(),
-                    rexpressT = drone.GetTag(),
+                    expressT = drone.GetTag(),
                 });
             }
         }
@@ -139,7 +139,7 @@ namespace DroneServiceApp
             {
                 Drone removeItem = ExpressService.Dequeue();
                 FinishList.Add(removeItem);
-                lstFinishedItems.Items.Add(removeItem);
+                lstFinishedItems.Items.Add(removeItem.DisplayFinishedOrders());
                 ExpressDisplay();
                 stsBar.Text = "Item moved to finish list.";
             }
@@ -151,7 +151,7 @@ namespace DroneServiceApp
             {
                 Drone removeItem = RegularService.Dequeue();
                 FinishList.Add(removeItem);
-                lstFinishedItems.Items.Add(removeItem);
+                lstFinishedItems.Items.Add(removeItem.DisplayFinishedOrders());
                 RegularDisplay();
                 stsBar.Text = "Item moved to finish list.";
             }
@@ -178,43 +178,32 @@ namespace DroneServiceApp
 
         private void lstvExpress_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            if(lstvExpress.SelectedItems.Count > 0)
-            {
-                lstvRegular.SelectedItem = null;
-                foreach (var item in ExpressService)
-                {
-                    // Fix?
-                    if (lstvExpress.SelectedItem == item)
-                    {
-                        txtClientInput.Text = item.GetName();
-                        txtModelInput.Text = item.GetModel();
-                        txtProblemInput.Text = item.GetProblem();
-                        txtCostInput.Text = item.GetCost().ToString();
-                        rbtnExpress.IsChecked = true;
-                        uidTag.Text = item.GetTag().ToString();
-                    }
-                }
-            }
+
+            int index = lstvExpress.SelectedIndex;
+            lstvRegular.SelectedItem = null;
+            SelectDisplay(ExpressService, index);
         }
 
         private void lstvRegular_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            if (lstvRegular.SelectedItems.Count > 0)
+            int index = lstvRegular.SelectedIndex;
+            lstvExpress.SelectedItem = null;
+            SelectDisplay(RegularService, index);
+        }
+        private void SelectDisplay(Queue<Drone>Queue, int index)
+        {
+            if(index >= 0)
             {
-                lstvExpress.SelectedItem = null;
-                foreach (var item in ExpressService)
-                {
-                    // Fix?
-                    if (lstvRegular.SelectedItem == item)
-                    {
-                        txtClientInput.Text = item.GetName();
-                        txtModelInput.Text = item.GetModel();
-                        txtProblemInput.Text = item.GetProblem();
-                        txtCostInput.Text = item.GetCost().ToString();
-                        rbtnRegular.IsChecked = true;
-                        uidTag.Text = item.GetTag().ToString();
-                    }
-                }
+                List<Drone> list = Queue.ToArray().ToList();
+                txtClientInput.Text = list[index].GetName();
+                txtModelInput.Text = list[index].GetModel();
+                txtProblemInput.Text = list[index].GetProblem();
+                txtCostInput.Text = list[index].GetCost().ToString();
+                stsBar.Text = "Item selected";
+            }
+            else
+            {
+                stsBar.Text = "Listview empty";
             }
         }
 
@@ -244,10 +233,5 @@ namespace DroneServiceApp
         {
             txtCostInput.Clear();
         }
-
-
-
-        // On focus clear textboxes.
-        // One method per textbox.
     }
 }
