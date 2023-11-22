@@ -51,6 +51,6 @@
         <Label x:Name="lblFinished" Content="Finished Items:" HorizontalAlignment="Left" Margin="594,10,0,0" VerticalAlignment="Top" Grid.Column="1"/>
         <TextBox x:Name="stsBar" HorizontalAlignment="Left" Margin="16,328,0,0" TextWrapping="Wrap" Text="Status:" Width="763" IsReadOnly="True" Height="20" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
         <Label x:Name="lblPriority" Content="Service Piority:" HorizontalAlignment="Left" Margin="19,211,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
-        <xctk:IntegerUpDown x:Name="uidTag" Increment="10" Minimum="100" Maximum="900" Grid.Column="1" Margin="10,274,0,87" Text="100" IsReadOnly="True" HorizontalAlignment="Left" Width="100"/>
+        <xctk:IntegerUpDown x:Name="uidTag" Increment="10" Minimum="100" Maximum="900" Grid.Column="1" Margin="10,274,0,87" Text="100" HorizontalAlignment="Left" Width="100" AllowTextInput="False"/>
     </Grid>
 </Window>

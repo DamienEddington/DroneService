@@ -1,24 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Damien\\Documents\\GitHub\\DroneServiceApp\\DroneServiceApp\\DroneServiceApp\\DroneServiceApp.csproj": {}
+    "C:\\Users\\30042780\\Documents\\GitHub\\DroneServiceApp\\DroneServiceApp\\DroneServiceApp\\DroneServiceApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Damien\\Documents\\GitHub\\DroneServiceApp\\DroneServiceApp\\DroneServiceApp\\DroneServiceApp.csproj": {
+    "C:\\Users\\30042780\\Documents\\GitHub\\DroneServiceApp\\DroneServiceApp\\DroneServiceApp\\DroneServiceApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Damien\\Documents\\GitHub\\DroneServiceApp\\DroneServiceApp\\DroneServiceApp\\DroneServiceApp.csproj",
+        "projectUniqueName": "C:\\Users\\30042780\\Documents\\GitHub\\DroneServiceApp\\DroneServiceApp\\DroneServiceApp\\DroneServiceApp.csproj",
         "projectName": "DroneServiceApp",
-        "projectPath": "C:\\Users\\Damien\\Documents\\GitHub\\DroneServiceApp\\DroneServiceApp\\DroneServiceApp\\DroneServiceApp.csproj",
-        "packagesPath": "C:\\Users\\Damien\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Damien\\Documents\\GitHub\\DroneServiceApp\\DroneServiceApp\\DroneServiceApp\\obj\\",
+        "projectPath": "C:\\Users\\30042780\\Documents\\GitHub\\DroneServiceApp\\DroneServiceApp\\DroneServiceApp\\DroneServiceApp.csproj",
+        "packagesPath": "C:\\Users\\30042780\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\30042780\\Documents\\GitHub\\DroneServiceApp\\DroneServiceApp\\DroneServiceApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Damien\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\30042780\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net6.0-windows"
+          "net6.0-windows7.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -51,8 +51,7 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -64,7 +63,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
         }
       }
     }
